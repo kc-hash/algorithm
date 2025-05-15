@@ -1,0 +1,64 @@
+ALGORITHM algorithm_name
+VAR
+         letter, before : Character
+    i, total, words, vowels : Integer
+    sentence : Array[1..22] of Character
+BEGIN
+   // Initialize counters
+    total <- 0
+    words <- 0
+    vowels <- 0
+    before <- " "
+
+    // The sentence: Je code chez Gomycode.
+    sentence[1] <- 'J'
+    sentence[2] <- 'e'
+    sentence[3] <- ' '
+    sentence[4] <- 'c'
+    sentence[5] <- 'o'
+    sentence[6] <- 'd'
+    sentence[7] <- 'e'
+    sentence[8] <- ' '
+    sentence[9] <- 'c'
+    sentence[10] <- 'h'
+    sentence[11] <- 'e'
+    sentence[12] <- 'z'
+    sentence[13] <- ' '
+    sentence[14] <- 'G'
+    sentence[15] <- 'o'
+    sentence[16] <- 'm'
+    sentence[17] <- 'y'
+    sentence[18] <- 'c'
+    sentence[19] <- 'o'
+    sentence[20] <- 'd'
+    sentence[21] <- 'e'
+    sentence[22] <- '.'  // end of the sentence
+
+    // Go through each letter
+    For i from 1 to 22
+        letter <- sentence[i]
+        total <- total + 1
+
+        // Count vowels
+        If letter = 'a' Or letter = 'e' Or letter = 'i' Or letter = 'o' Or letter = 'u' Or letter = 'y' Or
+           letter = 'A' Or letter = 'E' Or letter = 'I' Or letter = 'O' Or letter = 'U' Or letter = 'Y' Then
+            vowels <- vowels + 1
+        EndIf
+
+        // Count words when a space follows a letter
+        If letter = ' ' And before <> ' ' Then
+            words <- words + 1
+        EndIf
+
+        before <- letter
+    EndFor
+
+    // Add the last word before the dot
+    words <- words + 1
+
+    // Show results
+    Write "Total characters: ", total
+    Write "Number of words: ", words
+    Write "Number of vowels: ", vowels    
+END
+
