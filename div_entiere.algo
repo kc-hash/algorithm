@@ -1,4 +1,4 @@
-ALGORITHM algorithm_name
+ALGORITHM div_entiere.algo
 VAR
          letter, before : Character
     i, total, words, vowels : Integer
