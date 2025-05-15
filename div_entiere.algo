@@ -46,7 +46,7 @@ BEGIN
         EndIf
 
         // Count words when a space follows a letter
-        If letter = ' ' And before <> ' ' Then
+        If letter = ' ' And before = ' ' Then
             words <- words + 1
         EndIf
 
