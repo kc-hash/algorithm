@@ -40,8 +40,8 @@ BEGIN
         total <- total + 1
 
         // Count vowels
-        If letter = 'a' Or letter = 'e' Or letter = 'i' Or letter = 'o' Or letter = 'u' Or letter = 'y' Or
-           letter = 'A' Or letter = 'E' Or letter = 'I' Or letter = 'O' Or letter = 'U' Or letter = 'Y' Then
+        If letter = 'a' OR letter = 'e' OR letter = 'i' OR letter = 'o' OR letter = 'u' OR letter = 'y' OR
+           letter = 'A' OR letter = 'E' OR letter = 'I' OR letter = 'O' OR letter = 'U' OR letter = 'Y' Then
             vowels <- vowels + 1
         EndIf
 
